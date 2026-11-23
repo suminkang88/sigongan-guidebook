@@ -1,0 +1,6 @@
+---
+import {chapters} from '../data/navigation';
+const {order}=Astro.props;
+const previous=chapters.find(c=>c.order===order-1),next=chapters.find(c=>c.order===order+1);
+---
+<nav class="previous-next" aria-label="이전 다음 장">{previous&&<a href={previous.route}><span>이전 장</span><strong>{previous.order}. {previous.title}</strong></a>}{next&&<a href={next.route} class="next"><span>다음 장</span><strong>{next.order}. {next.title}</strong></a>}</nav>

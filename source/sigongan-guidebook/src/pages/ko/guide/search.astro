@@ -1,0 +1,6 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import {chapters} from '../../../data/navigation';
+---
+<BaseLayout title="가이드 검색" current="search"><div class="utility-page"><Breadcrumbs title="가이드 검색"/><p class="eyebrow" lang="en">GUIDE SEARCH</p><h1>어떤 내용이 궁금한가요?</h1><p class="doc-description">장 제목부터 본문까지, 필요한 내용을 찾아보세요.</p><form id="guide-search" role="search" method="get" action="/ko/guide/search/"><label for="search-query">가이드 검색어</label><div class="search-field"><input id="search-query" name="q" type="search" placeholder="대체텍스트, 키보드, WA 인증"/><button class="button primary" type="submit">검색</button></div></form><div class="suggestions" aria-label="추천 검색어"><span>추천 검색어</span>{['대체텍스트','키보드','WA 인증'].map(q=><a href={'?q='+encodeURIComponent(q)}>{q}</a>)}</div><p id="search-status" role="status" aria-live="polite">검색어를 입력하고 검색 버튼을 눌러 주세요.</p><ol id="search-results" class="search-results"></ol><p id="search-js-note">검색에는 JavaScript가 필요합니다. 아래 전체 목차에서 6개 장을 읽을 수 있습니다.</p><nav class="search-directory" aria-label="검색 페이지 전체 목차"><h2>전체 목차</h2><ul>{chapters.map(c=><li><a href={c.route}>{c.order}. {c.title}</a></li>)}</ul></nav></div><script>import '../../../scripts/search';</script></BaseLayout>

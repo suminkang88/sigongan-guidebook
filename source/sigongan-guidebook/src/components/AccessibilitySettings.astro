@@ -1,0 +1,6 @@
+<section id="accessibility-settings" class="settings-panel" aria-label="접근성 설정" hidden>
+<div class="settings-inner"><div><h2>나에게 편안한 읽기 환경</h2><p>선택한 설정은 이 브라우저에 저장됩니다.</p></div>
+<fieldset><legend>화면 테마</legend><div class="radio-options">{[['system','시스템 설정'],['light','라이트'],['dark','다크'],['high-contrast','고대비']].map(([v,l])=><label><input type="radio" name="themePreference" value={v}/><span>{l}</span></label>)}</div></fieldset>
+<fieldset><legend>글자 크기</legend><div class="radio-options">{[['normal','기본'],['large','크게'],['xlarge','아주 크게']].map(([v,l])=><label><input type="radio" name="textSize" value={v}/><span>{l}</span></label>)}</div></fieldset>
+<button type="button" class="button secondary" data-reset>설정 초기화</button><p role="status" data-preference-status></p></div>
+</section>

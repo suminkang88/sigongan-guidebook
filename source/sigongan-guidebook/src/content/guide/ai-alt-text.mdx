@@ -1,0 +1,161 @@
+---
+key: "ai-alt-text"
+title: "AI 대체텍스트, 어디까지 믿을 수 있나"
+description: "AI는 초안에 활용하고, 정확성·맥락·실제 구현을 확인하는 절차를 살펴봅니다."
+order: 4
+category: "content"
+route: "/ko/guide/ai-alt-text/"
+reviewedAt: "2026-11-23"
+sources: [{"title": "W3C 접근성 평가 도구 선택 안내", "url": "https://www.w3.org/WAI/test-evaluate/tools/selecting/"}, {"title": "WCAG 2.2 비텍스트 콘텐츠", "url": "https://www.w3.org/TR/WCAG22/#non-text-content"}]
+sections: [{"id": "drafts", "title": "4-1. AI는 초안 작성에 활용하고 결과를 검증합니다", "depth": 2}, {"id": "error-types", "title": "4-2. 오류는 정보 누락·맥락 불일치·잘못된 노출로 나누어 봅니다", "depth": 2}, {"id": "workflow", "title": "4-3. 권장 운영 방식은 초안·검수·적용 후 확인입니다", "depth": 2}, {"id": "evaluation", "title": "4-4. 도구의 성능과 접근성 적합성을 구분합니다", "depth": 2}, {"id": "faq", "title": "자주 묻는 질문", "depth": 2}, {"id": "faq-question-1", "title": "AI가 만든 문구를 그대로 사용해도 되나요?", "depth": 3}, {"id": "faq-question-2", "title": "장식 이미지는 AI가 판단할 수 없나요?", "depth": 3}, {"id": "faq-question-3", "title": "검수 이력을 학습 데이터로 사용해야 하나요?", "depth": 3}]
+---
+
+import SummaryCallout from '../../components/SummaryCallout.astro';
+import DoDont from '../../components/DoDont.astro';
+import Example from '../../components/Example.astro';
+import AccessibleTable from '../../components/AccessibleTable.astro';
+import Checklist from '../../components/Checklist.astro';
+import CodeBlock from '../../components/CodeBlock.astro';
+import SourceList from '../../components/SourceList.astro';
+
+<h2 id="drafts" tabindex="-1">4-1. AI는 초안 작성에 활용하고 결과를 검증합니다</h2>
+
+<SummaryCallout>
+
+AI의 활용 가능성은 이미지와 도구에 따라 다릅니다. AI를 사용했다는 사실만으로 결과의 적절성을 판단하지 않습니다.
+
+</SummaryCallout>
+
+이미지의 일반적인 외형을 설명하거나 반복 작업의 초안을 만드는 데 AI를 활용할 수 있습니다. 다만 상품 식별, 이미지 속 텍스트, 전문 용어, 페이지 맥락은 오류 가능성을 확인해야 합니다.
+
+다음 표는 AI 초안을 검수할 때 확인할 항목을 정리한 것입니다. 특정 모델의 성능을 측정한 비교표는 아닙니다.
+
+<AccessibleTable data={{"caption": "AI 초안 검수 항목", "columns": ["작업", "활용 방법", "반드시 확인할 내용"], "rows": [["외형 설명", "눈에 보이는 특징의 초안 작성", "색상·형태·대상에 대한 오인식"], ["텍스트 추출", "배너·포스터 문구 추출 보조", "날짜·가격·단위·조건의 누락과 오독"], ["맥락 반영", "주변 본문·상품 데이터와 함께 초안 생성", "이 페이지에서 필요한 정보인지 여부"], ["이미지 분류", "정보·기능·장식 분류 보조", "링크·버튼 구조와 중복 정보"]]}} />
+
+외형 설명은 원본 이미지와, 텍스트 추출은 원문과 대조합니다. 맥락에 맞는 정보인지는 페이지 전체에서 판단합니다. 장식과 기능의 구분은 이미지 자체뿐 아니라 실제 HTML 구조까지 확인합니다.
+
+<DoDont>
+<Example kind="do">
+
+상품명과 옵션 데이터를 함께 제공하고, 생성 결과를 상품 데이터와 대조합니다.
+
+</Example>
+<Example kind="dont">
+
+이미지만 보고 생성한 모델명·소재·가격을 사실로 등록하지 않습니다.
+
+</Example>
+</DoDont>
+
+<h2 id="error-types" tabindex="-1">4-2. 오류는 정보 누락·맥락 불일치·잘못된 노출로 나누어 봅니다</h2>
+
+<SummaryCallout>
+
+문장이 자연스러운지보다 사용자가 필요한 정보를 얻을 수 있는지 확인합니다.
+
+</SummaryCallout>
+
+<p class="subsection-label"><strong>실천 가이드</strong></p>
+
+1. **정보 누락·오인식:** ‘파란 옷’이라는 설명이 상품을 구분하는 무늬와 형태를 누락하지 않았는지 확인합니다. 모델명은 외형으로 추측하지 않고 확인된 데이터로 보완합니다.
+2. **맥락 불일치:** 차트의 모양만 설명하고 비교 결과·단위·수치를 빠뜨리지 않았는지 확인합니다.
+3. **잘못된 노출:** 장식 이미지에 긴 설명을 붙이거나, 기능 이미지에 빈 alt를 적용하지 않았는지 확인합니다.
+
+<DoDont>
+<Example kind="do">
+
+실제 상품 페이지에서 설명을 읽고 사용자가 다른 옵션과 구분할 수 있는지 점검합니다.
+
+</Example>
+<Example kind="dont">
+
+맞춤법과 문장 자연스러움만 검토한 뒤 접근성 검수를 완료했다고 처리하지 않습니다.
+
+</Example>
+</DoDont>
+
+<h2 id="workflow" tabindex="-1">4-3. 권장 운영 방식은 초안·검수·적용 후 확인입니다</h2>
+
+<SummaryCallout>
+
+이 가이드는 AI 생성 후 사람이 검토하고 실제 페이지에서 재확인하는 절차를 권장합니다. 이는 법령이 특정 작업 방식을 강제한다는 뜻은 아닙니다.
+
+</SummaryCallout>
+
+<p class="subsection-label"><strong>실천 가이드</strong></p>
+
+1. **자료 준비:** 이미지, 페이지 목적, 주변 텍스트, 확인된 상품·행사 정보를 모읍니다.
+2. **초안 생성:** 미확인 사실을 추측하지 않고 검토 필요 항목으로 표시하도록 합니다.
+3. **내용 검수:** 정보의 정확성, 목적 적합성, 장식 여부, 중복을 확인합니다.
+4. **구현 확인:** CMS에 등록된 alt와 버튼·링크의 이름이 실제 출력에서도 유지되는지 확인합니다.
+5. **이용 검증:** 스크린리더로 본문 흐름과 핵심 과업을 확인합니다.
+6. **기록·개선:** 수정 이유와 결과를 남겨 작성 규칙과 프롬프트를 개선합니다.
+
+고유명사·수치·법적 안내·안전 정보·금융 정보·기능 이미지는 우선 검수 대상으로 관리합니다. 표본 검수를 한다면 미검수 범위를 기록하고, 표본 결과를 전체 품질로 단정하지 않습니다.
+
+<DoDont>
+<Example kind="do">
+
+‘수정 전 초안, 최종 문구, 수정 이유, 검수일, 적용 위치’를 기록합니다.
+
+</Example>
+<Example kind="dont">
+
+검수한 문구가 실제 서비스에 반영되었는지 확인하지 않은 채 작업을 종료하지 않습니다.
+
+</Example>
+</DoDont>
+
+<h2 id="evaluation" tabindex="-1">4-4. 도구의 성능과 접근성 적합성을 구분합니다</h2>
+
+<SummaryCallout>
+
+자동화 도구는 점검을 돕지만, 도구의 결과만으로 전체 접근성 적합성을 판정할 수는 없습니다.
+
+</SummaryCallout>
+
+W3C WAI는 자동화할 수 없는 접근성 점검에 사람의 판단이 필요하다고 안내합니다. 이를 ‘W3C가 모든 AI 대체텍스트의 사용을 금지했다’거나 ‘AI 생성 문구는 모두 기준 미달이다’라는 뜻으로 확대하지 않습니다.
+
+<p class="subsection-label"><strong>실천 가이드</strong></p>
+
+- 누락률, 사실 오류율, 맥락 적합성, 사용자 과업 성공 여부를 구분해 평가합니다.
+- 정확도를 제시할 때는 표본·도메인·평가 기준·도구 버전·검수 방법을 함께 적습니다.
+- 수정 이력은 운영 증빙으로 활용하되 인증 가점이나 법적 면책을 보장한다고 설명하지 않습니다.
+- 비용과 작업시간 절감 효과는 실제 측정 결과가 있을 때 공개합니다.
+
+<DoDont>
+<Example kind="do">
+
+‘상품 이미지 200건 중 모델명 오류 12건’처럼 범위와 오류 기준을 함께 기록합니다. 이 수치는 기록 방식의 가상 예시입니다.
+
+</Example>
+<Example kind="dont">
+
+근거 없이 ‘정확도 99%’, ‘법적 리스크 제거’, ‘인증 통과 보장’을 제시하지 않습니다.
+
+</Example>
+</DoDont>
+
+<h2 id="faq" tabindex="-1">자주 묻는 질문</h2>
+
+<h3 id="faq-question-1" tabindex="-1">AI가 만든 문구를 그대로 사용해도 되나요?</h3>
+
+생성 결과가 적절한지는 검토해야 합니다. 원본·맥락·구현을 확인한 결과 수정이 필요 없을 수는 있지만, 생성 자체가 검증을 대신하지는 않습니다.
+
+<h3 id="faq-question-2" tabindex="-1">장식 이미지는 AI가 판단할 수 없나요?</h3>
+
+페이지 맥락을 입력하면 분류를 보조할 수 있습니다. 다만 이미지의 기능과 주변 텍스트까지 포함해 결과를 확인해야 합니다.
+
+<h3 id="faq-question-3" tabindex="-1">검수 이력을 학습 데이터로 사용해야 하나요?</h3>
+
+필수는 아닙니다. 내부 작성 규칙과 프롬프트 개선에 활용할 수 있으며, 실제 모델 학습에 사용하려면 권리와 개인정보 처리 조건 등을 별도로 확인합니다.
+
+대체텍스트 서비스 도입을 검토하고 있다면 시공간의 에이택을 살펴보세요. [에이택 서비스 알아보기](https://sigongan.com/ko/services/aitag) · [에이택 도입 문의](https://sigongan.com/ko/business)
+
+관련 장: [3. 대체텍스트 작성 7원칙](/ko/guide/alt-text-principles/), [6. WA 인증 취득 전 과정](/ko/guide/wa-certification/)
+
+<SourceList reviewedAt="2026-11-23">
+
+근거: [W3C 접근성 평가 도구 선택 안내](https://www.w3.org/WAI/test-evaluate/tools/selecting/), [WCAG 2.2 비텍스트 콘텐츠](https://www.w3.org/TR/WCAG22/#non-text-content)
+
+</SourceList>

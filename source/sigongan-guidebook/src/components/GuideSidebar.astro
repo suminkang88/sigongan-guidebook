@@ -1,0 +1,11 @@
+---
+import {chapters,groups} from '../data/navigation';
+import Icon from './Icon.astro';
+const {current=''}=Astro.props;
+---
+<div class="sidebar-shell"><button class="mobile-menu button secondary" type="button" data-menu-toggle aria-expanded="false" aria-controls="guide-menu" hidden><Icon name="menu"/>전체 목차</button>
+<nav id="guide-menu" aria-label="전체 가이드 목차" class="guide-sidebar">
+<a href="/ko/guide/" class:list={['sidebar-home',{active:current==='home'}]} aria-current={current==='home'?'page':undefined}><Icon name="book"/>가이드 홈</a>
+{groups.map(group=><div class="nav-group"><p class="nav-label">{group.title}</p><ol>{chapters.filter(c=>c.category===group.key).map(c=><li><a href={c.route} aria-current={current===c.key?'page':undefined} class:list={[{active:current===c.key}]}><span class="chapter-number">{String(c.order).padStart(2,'0')}</span><span>{c.navigationTitle}</span></a></li>)}</ol></div>)}
+<div class="sidebar-meta"><a href="/ko/guide/accessibility/" aria-current={current==='accessibility'?'page':undefined}>가이드 접근성 안내</a><span>KWCAG 2.2 · WCAG 2.2</span><span>기준 확인일 2026. 11. 23.</span></div>
+</nav></div>

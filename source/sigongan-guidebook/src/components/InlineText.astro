@@ -1,0 +1,5 @@
+---
+import {inlineMarkup} from '../scripts/inline';
+const {text=''}=Astro.props;
+---
+<Fragment set:html={inlineMarkup(text)}/>

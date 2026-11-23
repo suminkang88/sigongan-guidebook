@@ -1,0 +1,118 @@
+@media print {
+  @page {
+    margin: 18mm;
+  }
+  :root {
+    font-size: 100% !important;
+    --page: #fff !important;
+    --surface: #fff !important;
+    --card: #fff !important;
+    --text: #000 !important;
+    --heading: #000 !important;
+    --muted: #333 !important;
+    --brand: #000 !important;
+    --brand-soft: #fff !important;
+    --line: #777 !important;
+    --line-strong: #333 !important;
+    --do-bg: #fff !important;
+    --dont-bg: #fff !important;
+    --do-text: #000 !important;
+    --dont-text: #000 !important;
+    color-scheme: light;
+  }
+  .site-header,
+  .sidebar-shell,
+  .on-this-page,
+  .settings-panel,
+  .site-footer,
+  .skip-link,
+  .code-toolbar button,
+  .copy-status,
+  .previous-next,
+  .service-callout,
+  .home-search,
+  .suggestions {
+    display: none !important;
+  }
+  .site-frame,
+  .reading-layout {
+    display: block;
+    max-width: none;
+    padding: 0;
+  }
+  main {
+    padding: 0;
+  }
+  .prose,
+  .utility-page {
+    max-width: none !important;
+  }
+  .prose {
+    font-size: 11pt;
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 24pt !important;
+  }
+  h2 {
+    font-size: 17pt !important;
+    break-after: avoid;
+  }
+  h3 {
+    break-after: avoid;
+  }
+  .table-scroll {
+    overflow: visible;
+    padding: 0;
+  }
+  .table-scroll table {
+    min-width: 0;
+    font-size: 9pt;
+  }
+  .table-scroll th,
+  .table-scroll td {
+    padding: 0.4rem;
+    overflow-wrap: anywhere;
+  }
+  .code-block pre {
+    white-space: pre-wrap;
+    overflow: visible;
+  }
+  .code-block pre code {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+  .do-dont {
+    display: block;
+  }
+  .example {
+    margin-bottom: 1rem;
+    break-inside: avoid;
+  }
+  .summary-callout {
+    border: 1px solid #555;
+  }
+  .source-list {
+    break-inside: auto;
+  }
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+  .breadcrumbs {
+    display: none;
+  }
+  .home-hero {
+    padding-top: 0;
+  }
+  .chapter-grid {
+    display: block;
+  }
+  .chapter-card {
+    margin-bottom: 1rem;
+    break-inside: avoid;
+  }
+  .chapter-card a:after {
+    display: none;
+  }
+}

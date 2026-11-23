@@ -1,0 +1,7 @@
+---
+import Icon from './Icon.astro';
+import type {chapters} from '../data/navigation';
+interface Props {chapter:(typeof chapters)[number]}
+const {chapter:c}=Astro.props;
+---
+<article class="chapter-card"><span class="card-number">{String(c.order).padStart(2,'0')}</span><Icon name="file"/><h4><a href={c.route}>{c.title}</a></h4><p>{c.description}</p><span class="card-link" aria-hidden="true">가이드 읽기</span></article>

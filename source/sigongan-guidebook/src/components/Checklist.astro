@@ -1,0 +1,6 @@
+---
+import InlineText from './InlineText.astro';
+interface Props {items:string[]}
+const {items}=Astro.props;
+---
+<div class="checklist"><p class="checklist-note">체크 상태는 새로고침하면 초기화됩니다. 인증 판정이 아닌 개인 점검용입니다.</p><ul>{items.map(item=><li><label><input type="checkbox"/><span><InlineText text={item}/></span></label></li>)}</ul></div>

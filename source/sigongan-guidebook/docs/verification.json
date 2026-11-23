@@ -1,0 +1,370 @@
+{
+  "date": "2026-11-23",
+  "timezone": "Asia/Seoul",
+  "scope": "Local Astro app /ko/guide/ and static content validation; hosting authentication excluded",
+  "stats": {
+    "startTime": "2026-11-23T04:25:44.879Z",
+    "duration": 33778.078,
+    "expected": 48,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "versions": {
+    "node": "24.22.3",
+    "astro": "7.4.13",
+    "mdx": "8.1.6",
+    "chromium": "156.0.8078.79",
+    "axePlaywright": "4.14.0"
+  },
+  "contentChecks": 487,
+  "searchSections": 64,
+  "tests": [
+    {
+      "name": "axe home",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "axe introduction/",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "axe legal-obligations/",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "axe alt-text-principles/",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "axe ai-alt-text/",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "axe industry-guides/",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "axe wa-certification/",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "axe search/",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "axe accessibility/",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "theme light at 320px with largest text",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "theme dark at 320px with largest text",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "theme high-contrast at 320px with largest text",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "forced colors, reduced motion, 200% text and spacing preserve layout",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "tables expose caption, column/row headers and scroll regions",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "print styles retain content and sources",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "all six chapters have correct structure and directly reload",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "keyboard skip link, chapter navigation and previous next",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "chapter 3 deep link #concise is not obscured",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "chapter 3 deep link #context is not obscured",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "chapter 3 deep link #image-words is not obscured",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "chapter 3 deep link #avoid-duplication is not obscured",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "chapter 3 deep link #decorative is not obscured",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "chapter 3 deep link #accurate-functional is not obscured",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "chapter 3 deep link #punctuation is not obscured",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "responsive layout at 1440px",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "responsive layout at 1024px",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "responsive layout at 900px",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "responsive layout at 899px",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "responsive layout at 390px",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "responsive layout at 320px",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "404 offers recovery",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "theme and text size persist; reset removes only the owned key",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "system changes apply; explicit choice remains",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "blocked storage and corrupt settings do not break reading",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "no JS keeps all chapter links and rendered content",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "code examples remain escaped, copy success and failure preserve focus",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "checklist starts empty and resets on refresh",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "Korean spacing, case, Unicode, synonyms and AND semantics",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "search query 대체텍스트",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "search query alt",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "search query 대체 텍스트",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "search query WA 인증",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "search query 키보드",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "submitted query, empty result, history and XSS text are safe",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "visual capture home-desktop",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "visual capture chapter-desktop",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "visual capture chapter-mobile",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    },
+    {
+      "name": "visual capture home-mobile",
+      "ok": true,
+      "status": [
+        "passed"
+      ]
+    }
+  ],
+  "notPerformed": [
+    "NVDA",
+    "VoiceOver",
+    "TalkBack",
+    "real browser UI 400% zoom",
+    "real OS forced colors",
+    "Vercel deployment",
+    "WA certification"
+  ],
+  "revision": "Official Sigongan and Aitag logos; guide usage notice copy"
+}

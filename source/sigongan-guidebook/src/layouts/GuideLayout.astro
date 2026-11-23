@@ -1,0 +1,10 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import OnThisPage from '../components/OnThisPage.astro';
+import PreviousNext from '../components/PreviousNext.astro';
+import type {CollectionEntry} from 'astro:content';
+interface Props {meta:CollectionEntry<'guide'>['data']}
+const {meta}=Astro.props;
+---
+<BaseLayout title={meta.title} description={meta.description} current={meta.key}><article class="reading-layout"><div class="doc-intro"><Breadcrumbs title={meta.title}/><p class="eyebrow" lang="en">CHAPTER {String(meta.order).padStart(2,'0')}</p><h1>{meta.title}</h1><p class="doc-description">{meta.description}</p><p class="reviewed-date">기준 확인일 <time datetime={meta.reviewedAt}>2026. 11. 23.</time></p></div><OnThisPage sections={[...meta.sections,{id:'sources',title:'출처와 참고 자료',depth:2}]}/><div class="prose" data-guide-content><slot/><PreviousNext order={meta.order}/></div></article></BaseLayout>

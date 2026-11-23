@@ -1,0 +1,5 @@
+---
+import Icon from './Icon.astro';
+const {code,language='html'}=Astro.props;
+---
+<div class="code-block"><div class="code-toolbar"><span>{language.toUpperCase()}</span><button type="button" data-copy hidden><Icon name="copy"/>코드 복사</button></div><pre tabindex="0" aria-label={language+' 코드 예시'}><code>{code}</code></pre><p class="copy-status" role="status"></p></div>

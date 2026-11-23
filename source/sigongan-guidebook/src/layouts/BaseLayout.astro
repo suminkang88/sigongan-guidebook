@@ -1,0 +1,19 @@
+---
+import '../styles/tokens.css';
+import '../styles/global.css';
+import '../styles/prose.css';
+import '../styles/print.css';
+import GuideHeader from '../components/GuideHeader.astro';
+import BrandName from '../components/BrandName.astro';
+import GuideSidebar from '../components/GuideSidebar.astro';
+import AccessibilitySettings from '../components/AccessibilitySettings.astro';
+interface Props {title:string;description?:string;current?:string}
+const {title,description='기획부터 콘텐츠 작성, 검수와 운영까지. 시공간 웹 접근성 실무 가이드.',current=''}=Astro.props;
+const canonical=Astro.site ? new URL(Astro.url.pathname,Astro.site) : undefined;
+---
+<!doctype html><html lang="ko"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={description}/><meta name="robots" content="noindex, nofollow"/><title>{title} | 시공간</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"/>{canonical&&<link rel="canonical" href={canonical}/>}
+<script is:inline>
+(()=>{let p={themePreference:'system',textSize:'normal'};try{const s=JSON.parse(localStorage.getItem('sigongan-guide-preferences-v1')||'{}');if(s&&typeof s==='object'){if(['system','light','dark','high-contrast'].includes(s.themePreference))p.themePreference=s.themePreference;if(['normal','large','xlarge'].includes(s.textSize))p.textSize=s.textSize;}}catch{}document.documentElement.dataset.theme=p.themePreference;document.documentElement.dataset.textSize=p.textSize;})();
+</script></head><body><a class="skip-link" href="#main">본문으로 건너뛰기</a><GuideHeader/><AccessibilitySettings/><div class="site-frame"><GuideSidebar current={current}/><main id="main" tabindex="-1"><slot/></main></div><footer class="site-footer"><div><a class="wordmark" href="https://sigongan.com/ko"><BrandName/></a><p>누구나 정보에 닿을 수 있도록.</p></div><div><a href="/ko/guide/accessibility/">가이드 접근성 안내</a><span>© 2026 시공간 · 웹 접근성 실무 가이드</span></div></footer>
+<script>import '../scripts/preferences';import '../scripts/navigation';import '../scripts/clipboard';</script>
+</body></html>

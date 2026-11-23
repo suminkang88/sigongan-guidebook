@@ -1,0 +1,162 @@
+[
+  {
+    "key": "introduction",
+    "title": "웹 접근성이란 무엇인가",
+    "description": "접근성의 의미와 네 가지 원칙을 이해하고, 작은 점검부터 운영에 연결합니다.",
+    "order": 1,
+    "category": "basics",
+    "route": "/ko/guide/introduction/",
+    "reviewedAt": "2026-11-23",
+    "sources": [
+      {
+        "title": "KWCAG 2.2 국가표준 안내",
+        "url": "https://www.rra.go.kr/ko/reference/kcsList_view.do?nb_seq=5247&nb_type=6"
+      },
+      {
+        "title": "WCAG 2.2",
+        "url": "https://www.w3.org/TR/WCAG22/"
+      },
+      {
+        "title": "WebAIM Million 2026",
+        "url": "https://webaim.org/projects/million/"
+      }
+    ],
+    "navigationTitle": "웹 접근성이란 무엇인가"
+  },
+  {
+    "key": "legal-obligations",
+    "title": "장차법 웹 접근성 의무 대상",
+    "description": "조직과 서비스의 적용 근거를 확인하고, 준수 의무와 품질인증을 구분합니다.",
+    "order": 2,
+    "category": "basics",
+    "route": "/ko/guide/legal-obligations/",
+    "reviewedAt": "2026-11-23",
+    "sources": [
+      {
+        "title": "장차법",
+        "url": "https://www.law.go.kr/법령/장애인차별금지및권리구제등에관한법률"
+      },
+      {
+        "title": "장차법 시행령",
+        "url": "https://www.law.go.kr/법령/장애인차별금지및권리구제등에관한법률시행령"
+      },
+      {
+        "title": "디지털포용법",
+        "url": "https://www.law.go.kr/법령/디지털포용법"
+      }
+    ],
+    "navigationTitle": "장차법 웹 접근성 의무 대상"
+  },
+  {
+    "key": "alt-text-principles",
+    "title": "대체텍스트 작성 7원칙",
+    "description": "이미지의 목적과 맥락에 맞게 씁니다. 좋은 예와 피할 예로 작성 기준을 익힙니다.",
+    "order": 3,
+    "category": "content",
+    "route": "/ko/guide/alt-text-principles/",
+    "reviewedAt": "2026-11-23",
+    "sources": [
+      {
+        "title": "W3C 이미지 튜토리얼",
+        "url": "https://www.w3.org/WAI/tutorials/images/"
+      },
+      {
+        "title": "alt 결정 트리",
+        "url": "https://www.w3.org/WAI/tutorials/images/decision-tree/"
+      },
+      {
+        "title": "작성 팁",
+        "url": "https://www.w3.org/WAI/tutorials/images/tips/"
+      },
+      {
+        "title": "기능 이미지",
+        "url": "https://www.w3.org/WAI/tutorials/images/functional/"
+      },
+      {
+        "title": "복잡한 이미지",
+        "url": "https://www.w3.org/WAI/tutorials/images/complex/"
+      }
+    ],
+    "navigationTitle": "대체텍스트 작성 7원칙"
+  },
+  {
+    "key": "ai-alt-text",
+    "title": "AI 대체텍스트, 어디까지 믿을 수 있나",
+    "description": "AI는 초안에 활용하고, 정확성·맥락·실제 구현을 확인하는 절차를 살펴봅니다.",
+    "order": 4,
+    "category": "content",
+    "route": "/ko/guide/ai-alt-text/",
+    "reviewedAt": "2026-11-23",
+    "sources": [
+      {
+        "title": "W3C 접근성 평가 도구 선택 안내",
+        "url": "https://www.w3.org/WAI/test-evaluate/tools/selecting/"
+      },
+      {
+        "title": "WCAG 2.2 비텍스트 콘텐츠",
+        "url": "https://www.w3.org/TR/WCAG22/#non-text-content"
+      }
+    ],
+    "navigationTitle": "AI 대체텍스트, 어디까지 믿을 수 있나"
+  },
+  {
+    "key": "industry-guides",
+    "title": "산업별 적용 가이드: 쇼핑몰·공공기관·금융",
+    "description": "상품 구매부터 공공 서비스 신청, 금융 거래까지 업종별 핵심 과업을 점검합니다.",
+    "order": 5,
+    "category": "operations",
+    "route": "/ko/guide/industry-guides/",
+    "reviewedAt": "2026-11-23",
+    "sources": [
+      {
+        "title": "KWCAG 2.2 국가표준 안내",
+        "url": "https://www.rra.go.kr/ko/reference/kcsList_view.do?nb_seq=5247&nb_type=6"
+      },
+      {
+        "title": "금융위원회 2025년 4월 15일 보도자료",
+        "url": "https://www.fsc.go.kr/no010101/84373"
+      }
+    ],
+    "navigationTitle": "산업별 적용 가이드"
+  },
+  {
+    "key": "wa-certification",
+    "title": "WA 인증 취득 전 과정",
+    "description": "준비·신청·심사·보완·운영의 흐름과 비용, 유지 관리 기준을 확인합니다.",
+    "order": 6,
+    "category": "operations",
+    "route": "/ko/guide/wa-certification/",
+    "reviewedAt": "2026-11-23",
+    "sources": [
+      {
+        "title": "디지털포용법 제21조",
+        "url": "https://www.law.go.kr/법령/디지털포용법/제21조"
+      },
+      {
+        "title": "인증기관 안내 사례: 문화체육관광부",
+        "url": "https://www.mcst.go.kr/site/s_etc/webAccess/accessibility.jsp"
+      },
+      {
+        "title": "심사 절차",
+        "url": "https://www.wa.or.kr/m1/sub2.asp"
+      },
+      {
+        "title": "심사 기준",
+        "url": "https://www.wa.or.kr/m1/sub3.asp"
+      },
+      {
+        "title": "심사 비용",
+        "url": "https://www.wa.or.kr/m1/sub4.asp"
+      },
+      {
+        "title": "W3C 표 접근성",
+        "url": "https://www.w3.org/WAI/tutorials/tables/"
+      },
+      {
+        "title": "WCAG 2.2",
+        "url": "https://www.w3.org/TR/WCAG22/"
+      }
+    ],
+    "navigationTitle": "WA 인증 취득 전 과정"
+  }
+]

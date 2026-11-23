@@ -1,0 +1,4 @@
+---
+const {kind}=Astro.props;
+---
+<div class:list={['example',kind]}><p class="example-label"><strong><span lang="en">{kind==='do'?'Do':'Don’t'}</span> {kind==='do'?'좋은 예':'피할 예'}</strong></p><slot/></div>

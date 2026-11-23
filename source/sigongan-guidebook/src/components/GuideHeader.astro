@@ -1,0 +1,8 @@
+---
+import Icon from './Icon.astro';
+import BrandName from './BrandName.astro';
+---
+<header class="site-header" data-header>
+  <div class="utility"><div class="header-inner"><a href="https://sigongan.com/ko">시공간 홈페이지</a><button type="button" class="settings-toggle" data-settings-toggle aria-expanded="false" aria-controls="accessibility-settings" hidden><Icon name="settings"/>접근성 설정</button></div></div>
+  <div class="header-inner masthead"><a class="brand" href="/ko/guide/"><BrandName/><span class="brand-divider"></span><span class="brand-description">웹 접근성 실무 가이드</span><span class="sr-only"> 홈</span></a><a class="header-search" aria-label="가이드 검색" href="/ko/guide/search/"><Icon name="search"/><span>가이드 검색</span></a></div>
+</header>

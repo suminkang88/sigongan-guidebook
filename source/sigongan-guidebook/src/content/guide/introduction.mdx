@@ -1,0 +1,167 @@
+---
+key: "introduction"
+title: "웹 접근성이란 무엇인가"
+description: "접근성의 의미와 네 가지 원칙을 이해하고, 작은 점검부터 운영에 연결합니다."
+order: 1
+category: "basics"
+route: "/ko/guide/introduction/"
+reviewedAt: "2026-11-23"
+sources: [{"title": "KWCAG 2.2 국가표준 안내", "url": "https://www.rra.go.kr/ko/reference/kcsList_view.do?nb_seq=5247&nb_type=6"}, {"title": "WCAG 2.2", "url": "https://www.w3.org/TR/WCAG22/"}, {"title": "WebAIM Million 2026", "url": "https://webaim.org/projects/million/"}]
+sections: [{"id": "access-for-everyone", "title": "1-1. 누구나 정보를 이해하고 기능을 사용할 수 있어야 합니다", "depth": 2}, {"id": "benefits", "title": "1-2. 접근성은 다양한 사용 환경을 함께 개선합니다", "depth": 2}, {"id": "four-principles", "title": "1-3. 네 가지 원칙으로 점검 범위를 잡습니다", "depth": 2}, {"id": "getting-started", "title": "1-4. 작은 점검부터 운영에 연결합니다", "depth": 2}, {"id": "faq", "title": "자주 묻는 질문", "depth": 2}, {"id": "faq-question-1", "title": "웹 접근성은 장애인만을 위한 것인가요?", "depth": 3}, {"id": "faq-question-2", "title": "디자인을 크게 바꿔야 하나요?", "depth": 3}, {"id": "faq-question-3", "title": "기존 사이트는 새로 만들어야 하나요?", "depth": 3}]
+---
+
+import SummaryCallout from '../../components/SummaryCallout.astro';
+import DoDont from '../../components/DoDont.astro';
+import Example from '../../components/Example.astro';
+import AccessibleTable from '../../components/AccessibleTable.astro';
+import Checklist from '../../components/Checklist.astro';
+import CodeBlock from '../../components/CodeBlock.astro';
+import SourceList from '../../components/SourceList.astro';
+
+<h2 id="access-for-everyone" tabindex="-1">1-1. 누구나 정보를 이해하고 기능을 사용할 수 있어야 합니다</h2>
+
+<SummaryCallout>
+
+장애 유무, 사용하는 기기와 입력 방식에 관계없이 정보와 기능에 접근할 수 있도록 만듭니다.
+
+</SummaryCallout>
+
+스크린리더는 화면의 텍스트와 프로그램이 제공하는 구조·이름·상태 등을 음성이나 점자로 전달하는 보조기술입니다. 이미지에 적절한 텍스트 대안이 없으면 파일명만 전달되거나 이미지의 의미가 누락될 수 있습니다. 실제 읽기 방식은 브라우저와 스크린리더에 따라 달라집니다.
+
+접근성은 이미지에만 해당하지 않습니다. 키보드로 선택할 수 없는 메뉴, 색으로만 표시한 오류, 자막이 없는 안내 영상도 사용자의 이용을 막을 수 있습니다.
+
+<p class="subsection-label"><strong>실천 가이드</strong></p>
+
+- 이미지와 소리로 전달하는 핵심 정보에 텍스트 대안을 제공합니다.
+- 키보드, 스크린리더, 화면 확대 환경에서 주요 기능을 확인합니다.
+- ‘내용을 볼 수 있는가’와 함께 ‘가입·신청·구매를 끝낼 수 있는가’를 확인합니다.
+
+<DoDont>
+<Example kind="do">
+
+상품 이미지의 특징을 텍스트로 제공하고, 옵션 선택부터 결제까지 키보드로 진행할 수 있게 합니다.
+
+</Example>
+<Example kind="dont">
+
+화면이 정상적으로 보이거나 대체텍스트를 추가했다는 이유만으로 전체 서비스가 접근 가능하다고 판단하지 않습니다.
+
+</Example>
+</DoDont>
+
+<h2 id="benefits" tabindex="-1">1-2. 접근성은 다양한 사용 환경을 함께 개선합니다</h2>
+
+<SummaryCallout>
+
+장애인의 이용을 보장하는 설계는 일시적·상황적 제약이 있는 사용자에게도 도움이 됩니다.
+
+</SummaryCallout>
+
+경사로가 휠체어뿐 아니라 유모차와 캐리어 이용자에게도 편리한 것처럼, 접근성을 위한 개선은 더 넓은 사용자에게 이로울 수 있습니다. 이를 흔히 ‘커브컷 효과’라고 부릅니다.
+
+<p class="subsection-label"><strong>실천 가이드</strong></p>
+
+- 자막은 청각장애인과 소리를 켜기 어려운 사용자가 함께 이용할 수 있게 제공합니다.
+- 충분한 명도 대비는 저시력 사용자와 밝은 야외에서 화면을 보는 사용자를 함께 고려합니다.
+- 쉬운 설명과 일관된 탐색 구조로 서비스를 처음 사용하는 사람의 이해를 돕습니다.
+
+<DoDont>
+<Example kind="do">
+
+‘접수 완료’라는 텍스트와 아이콘을 함께 제공해 상태를 명확하게 알립니다.
+
+</Example>
+<Example kind="dont">
+
+성공은 초록색, 실패는 빨간색으로만 구분하지 않습니다.
+
+</Example>
+</DoDont>
+
+<h2 id="four-principles" tabindex="-1">1-3. 네 가지 원칙으로 점검 범위를 잡습니다</h2>
+
+<SummaryCallout>
+
+KWCAG 2.2는 인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성의 4원칙·14지침·33개 검사항목으로 구성됩니다.
+
+</SummaryCallout>
+
+국제 지침인 WCAG와 국내 국가표준인 KWCAG는 관련성이 있지만 같은 기준은 아닙니다. 특히 KWCAG 2.2는 WCAG 2.1을 기초로 국내 여건을 반영해 마련되었습니다. WCAG 2.2의 A·AA 수준 적합성도 목표로 삼는다면 해당 성공 기준을 별도로 확인해야 합니다.
+
+다음 표는 네 가지 원칙을 사용자의 관점에서 정리한 것입니다.
+
+<AccessibleTable data={{"caption": "웹 접근성의 네 가지 원칙", "columns": ["원칙", "사용자가 할 수 있어야 하는 일", "대표 점검 항목"], "rows": [["인식의 용이성", "정보를 자신의 감각과 보조기술로 인식하기", "대체텍스트, 자막, 명도 대비, 표 구조"], ["운용의 용이성", "다양한 입력 방식으로 기능을 조작하기", "키보드 조작, 초점 이동·표시, 충분한 조작 시간"], ["이해의 용이성", "내용과 조작 방법을 이해하기", "기본 언어, 입력 레이블, 오류 안내"], ["견고성", "브라우저와 보조기술에서 의미와 기능을 전달받기", "적절한 마크업, 웹 애플리케이션 접근성"]]}} />
+
+인식의 용이성은 정보를 알아볼 수 있는지, 운용의 용이성은 기능을 조작할 수 있는지를 다룹니다. 이해의 용이성은 설명과 사용 방법이 명확한지, 견고성은 보조기술에서도 구조와 기능이 전달되는지를 다룹니다.
+
+<p class="subsection-label"><strong>실천 가이드</strong></p>
+
+- 대체텍스트·키보드·명도 대비·자막부터 확인하되, 전체 검사항목으로 점검 범위를 넓힙니다.
+- 공통 메뉴와 버튼 같은 반복 요소를 먼저 개선해 여러 페이지에 반영합니다.
+- 자동 점검 결과에 키보드와 스크린리더 점검 결과를 더합니다.
+
+<DoDont>
+<Example kind="do">
+
+회원가입에서 레이블, 입력 오류, 인증, 완료 안내까지 전체 과정을 확인합니다.
+
+</Example>
+<Example kind="dont">
+
+자동 점검 점수나 일부 항목의 개선을 전체 지침 준수와 동일하게 설명하지 않습니다.
+
+</Example>
+</DoDont>
+
+<h2 id="getting-started" tabindex="-1">1-4. 작은 점검부터 운영에 연결합니다</h2>
+
+<SummaryCallout>
+
+처음부터 모든 화면을 동시에 고치기 어렵다면, 사용자의 이용을 막는 문제부터 해결합니다.
+
+</SummaryCallout>
+
+WebAIM Million 2026은 상위 100만 웹사이트의 홈페이지를 자동 분석해 페이지당 평균 56.1개의 오류를 발견했습니다. 대체텍스트 누락이 발견된 홈페이지는 53.1%였습니다. 이는 홈페이지 표본의 자동 점검 결과이며, 전체 웹이나 AI 도구의 성능을 평가한 수치는 아닙니다.
+
+<p class="subsection-label"><strong>실천 가이드</strong></p>
+
+1. 로그인·신청·구매처럼 핵심 과업을 선정합니다.
+2. WAVE, Lighthouse 등으로 자동 감지 가능한 문제를 확인합니다.
+3. 키보드와 스크린리더로 핵심 과업을 직접 수행합니다.
+4. 진행을 막는 문제부터 담당자와 수정 기한을 정합니다.
+5. 새 콘텐츠와 기능의 배포 전 점검에 같은 기준을 적용합니다.
+
+<DoDont>
+<Example kind="do">
+
+‘결제 버튼에 키보드로 도달할 수 없음’을 우선 수정하고, 수정 후 주문 완료까지 다시 확인합니다.
+
+</Example>
+<Example kind="dont">
+
+자동 점검에서 오류가 없다는 이유로 수동 점검을 생략하지 않습니다.
+
+</Example>
+</DoDont>
+
+<h2 id="faq" tabindex="-1">자주 묻는 질문</h2>
+
+<h3 id="faq-question-1" tabindex="-1">웹 접근성은 장애인만을 위한 것인가요?</h3>
+
+장애인의 동등한 이용을 보장하는 것이 중요한 출발점입니다. 그 과정에서 고령자와 일시적·상황적 제약이 있는 사용자도 함께 도움을 받습니다.
+
+<h3 id="faq-question-2" tabindex="-1">디자인을 크게 바꿔야 하나요?</h3>
+
+문제에 따라 다릅니다. 레이블이나 마크업 수정으로 해결할 수도 있고, 대비·조작 방식·탐색 구조의 변경이 필요할 수도 있습니다.
+
+<h3 id="faq-question-3" tabindex="-1">기존 사이트는 새로 만들어야 하나요?</h3>
+
+진단 후 결정합니다. 공통 컴포넌트와 콘텐츠 작성 절차를 개선해 기존 사이트를 단계적으로 보완할 수 있습니다.
+
+관련 장: [2. 장차법 웹 접근성 의무 대상](/ko/guide/legal-obligations/), [3. 대체텍스트 작성 7원칙](/ko/guide/alt-text-principles/)
+
+<SourceList reviewedAt="2026-11-23">
+
+근거: [KWCAG 2.2 국가표준 안내](https://www.rra.go.kr/ko/reference/kcsList_view.do?nb_seq=5247&nb_type=6), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), [WebAIM Million 2026](https://webaim.org/projects/million/)
+
+</SourceList>

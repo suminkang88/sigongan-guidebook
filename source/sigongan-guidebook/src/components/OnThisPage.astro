@@ -1,0 +1,5 @@
+---
+interface Props {sections:{id:string;title:string;depth:number}[]}
+const {sections}=Astro.props;
+---
+<aside class="on-this-page"><details open><summary>이 장의 내용</summary><nav aria-label="이 장의 내용"><ol>{sections.map(s=><li class:list={[{subsection:s.depth===3}]}><a href={'#'+s.id} data-toc-link>{s.title}</a></li>)}</ol></nav></details></aside>

@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "Pretendard Variable";
+  src: url("/fonts/PretendardVariable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  color-scheme: light;
+  --brand: #0b4a8a;
+  --brand-hover: #0e5fa8;
+  --brand-soft: #eaf1f9;
+  --page: #fff;
+  --surface: #f5f7fa;
+  --card: #fff;
+  --heading: #101322;
+  --text: #3c4250;
+  --muted: #667085;
+  --line: #e5e8ee;
+  --line-strong: #667085;
+  --on-brand: #fff;
+  --do-text: #3e5747;
+  --do-bg: #f4f6f4;
+  --dont-text: #775452;
+  --dont-bg: #f7f4f3;
+  --focus: #0b4a8a;
+  --header-offset: 6.5rem;
+  --font:
+    "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-family: var(--font);
+  font-size: 100%;
+}
+:root[data-text-size="large"] {
+  font-size: 112.5%;
+}
+:root[data-text-size="xlarge"] {
+  font-size: 125%;
+}
+:root[data-theme="dark"],
+:root[data-theme="high-contrast"] {
+  color-scheme: dark;
+  --brand: #8cbdf0;
+  --brand-hover: #b1d6fa;
+  --brand-soft: #1f324b;
+  --page: #101322;
+  --surface: #1b2030;
+  --card: #1b2030;
+  --heading: #f3f5f8;
+  --text: #f3f5f8;
+  --muted: #b8c2d1;
+  --line: #394255;
+  --line-strong: #b8c2d1;
+  --on-brand: #101322;
+  --do-text: #f3f5f8;
+  --do-bg: #1b2030;
+  --dont-text: #f3f5f8;
+  --dont-bg: #1b2030;
+  --focus: #ffe66d;
+}
+:root[data-theme="high-contrast"] {
+  --page: #000;
+  --surface: #000;
+  --card: #000;
+  --brand-soft: #000;
+  --heading: #fff;
+  --text: #fff;
+  --muted: #fff;
+  --line: #fff;
+  --line-strong: #fff;
+  --on-brand: #000;
+  --do-text: #fff;
+  --do-bg: #000;
+  --dont-text: #fff;
+  --dont-bg: #000;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]),
+  :root[data-theme="system"] {
+    color-scheme: dark;
+    --brand: #8cbdf0;
+    --brand-hover: #b1d6fa;
+    --brand-soft: #1f324b;
+    --page: #101322;
+    --surface: #1b2030;
+    --card: #1b2030;
+    --heading: #f3f5f8;
+    --text: #f3f5f8;
+    --muted: #b8c2d1;
+    --line: #394255;
+    --line-strong: #b8c2d1;
+    --on-brand: #101322;
+    --do-text: #f3f5f8;
+    --do-bg: #1b2030;
+    --dont-text: #f3f5f8;
+    --dont-bg: #1b2030;
+    --focus: #ffe66d;
+  }
+}

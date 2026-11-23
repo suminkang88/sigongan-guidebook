@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ChapterCard from '../../../components/ChapterCard.astro';
+import ServiceCallout from '../../../components/ServiceCallout.astro';
+import Icon from '../../../components/Icon.astro';
+import {chapters,groups} from '../../../data/navigation';
+---
+<BaseLayout title="웹 접근성 실무 가이드" current="home">
+<section class="home-hero"><div class="hero-top"><span class="eyebrow" lang="en">SIGONGAN ACCESSIBILITY GUIDE</span><span class="edition">실무자를 위한 가이드북</span></div><p class="hero-kicker">누구나 정보에 닿도록.</p><h1>웹 접근성 실무 가이드</h1><p class="hero-description">기획부터 콘텐츠 작성, 검수와 운영까지.<br/>시공간과 함께 웹 접근성의 기준을 이해하고 실무에 적용해 보세요.</p><a class="button primary" href="/ko/guide/introduction/"><Icon name="book"/>가이드 시작하기</a><div class="hero-meta"><span>제공 <strong>시공간</strong></span><span>6개 장으로 살펴보는 웹 접근성</span><span>기준 확인일 2026. 11. 23.</span></div></section>
+<form class="home-search" role="search" action="/ko/guide/search/" method="get"><label for="home-query">궁금한 접근성 항목을 검색하세요</label><div class="search-field"><Icon name="search"/><input id="home-query" name="q" type="search" placeholder="대체텍스트, 키보드, WA 인증"/><button class="button primary" type="submit">검색</button></div></form>
+<section class="chapter-directory" aria-labelledby="chapters-title"><div class="section-title"><div><p class="eyebrow">읽고, 적용하고, 점검하기</p><h2 id="chapters-title">필요한 주제부터 살펴보세요</h2></div><span>전체 6개 장</span></div>{groups.map(group=><section class="chapter-group"><h3 class="group-title">{group.title}</h3><div class="chapter-grid">{chapters.filter(c=>c.category===group.key).map(c=><ChapterCard chapter={c}/>)}</div></section>)}</section>
+<aside class="guide-note"><Icon name="book"/><div><h2>가이드 활용 방법 안내</h2><p>목차나 검색으로 필요한 내용을 찾고, 각 장의 예시와 체크리스트를 실무에 활용해 보세요.</p><a href="/ko/guide/accessibility/">목차·검색·읽기 설정 이용 방법 보기</a></div></aside><ServiceCallout/>
+</BaseLayout>

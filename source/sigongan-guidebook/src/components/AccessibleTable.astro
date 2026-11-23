@@ -1,0 +1,6 @@
+---
+import InlineText from './InlineText.astro';
+interface Props {data:{caption:string;columns:string[];rows:string[][]}}
+const {data}=Astro.props;
+---
+<div class="table-scroll" data-table-scroll role="region" aria-label={data.caption}><table><caption>{data.caption}</caption><thead><tr>{data.columns.map(c=><th scope="col"><InlineText text={c}/></th>)}</tr></thead><tbody>{data.rows.map(row=><tr>{row.map((cell,i)=>i===0?<th scope="row"><InlineText text={cell}/></th>:<td><InlineText text={cell}/></td>)}</tr>)}</tbody></table></div>

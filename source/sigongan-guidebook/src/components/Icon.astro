@@ -1,0 +1,6 @@
+---
+interface Props { name: string; }
+const {name}=Astro.props;
+const paths:Record<string,string>={search:'m21 21-5-5 M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0',book:'M3 4h6a4 4 0 0 1 3 2 4 4 0 0 1 3-2h6v16h-6a4 4 0 0 0-3 2 4 4 0 0 0-3-2H3z M12 6v16',settings:'M4 6h16 M4 12h16 M4 18h16 M8 3v6 M16 9v6 M10 15v6',menu:'M3 6h18 M3 12h18 M3 18h18',check:'m5 12 4 4L19 6',close:'m6 6 12 12 M18 6 6 18',file:'M14 2H5v20h14V7z M14 2v6h5 M8 12h8 M8 16h6',copy:'M8 8h12v13H8z M16 8V3H3v13h5'};
+---
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d={paths[name]||paths.book}/></svg>
